@@ -15,7 +15,7 @@ namespace Ultrabuff
     {
         public override string Author
         {
-            get { return "MarioE & DarkunderdoG & Loganizer"; }
+            get { return "DarkunderdoG & Loganizer"; }
         }
         private bool[] Bunny = new bool[256];
         private bool[] Shine = new bool[256];
@@ -54,7 +54,7 @@ namespace Ultrabuff
         public Ultrabuff(Main game)
             : base(game)
         {
-            Order = -10;
+            Order = 1;
         }
 
         protected override void Dispose(bool disposing)
@@ -67,26 +67,26 @@ namespace Ultrabuff
         }
         public override void Initialize()
         {
-            Commands.ChatCommands.Add(new Command(new List<string>() {"bunny", "buffall"}, BunnyModeCmd, "bunny"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"grav", "buffall"}, GravModeCmd, "grav"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"grav", "buffall"}, ShineModeCmd, "shine"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"thorns", "buffall"}, ThornsModeCmd, "thorns"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"archery", "buffall"}, ArcheryModeCmd, "archery"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"spelunker", "buffall"}, SpelunkerModeCmd, "spelunker"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"ironskin", "buffall"}, IronskinModeCmd, "ironskin"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"magic", "buffall"}, ManaModeCmd, "magic"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"regen", "buffall"}, RegenModeCmd, "regen"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"obsidian", "buffall"}, ObsidianModeCmd, "obsidian"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"swiftness", "buffall"}, SwiftModeCmd, "swiftness"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"featherfall", "buffall"}, FeatherModeCmd, "feather"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"invisibility", "buffall"}, InvisModeCmd, "invis"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"nightowl", "buffall"}, NightModeCmd, "nightowl"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"waterwalk", "buffall"}, WaterWalkModeCmd, "waterwalk"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"orb", "buffall"}, OrbModeCmd, "orb"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"fairy", "buffall"}, FairyModeCmd, "fairy"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"soup", "buffall"}, SoupModeCmd, "wellfed"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"gills", "buffall"}, GillsModeCmd, "gills"));
-            Commands.ChatCommands.Add(new Command(new List<string>() {"battle", "buffall"}, BattleModeCmd, "battle"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"bunny", "buffall"}, BunnyModeCmd, "bunny", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"grav", "buffall"}, GravModeCmd, "grav", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"grav", "buffall"}, ShineModeCmd, "shine", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"thorns", "buffall"}, ThornsModeCmd, "thorns", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"archery", "buffall"}, ArcheryModeCmd, "archery", "ultrabuff", "ultrabuff", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"spelunker", "buffall"}, SpelunkerModeCmd, "spelunker", "ultrabuff", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"ironskin", "buffall"}, IronskinModeCmd, "ironskin", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"magic", "buffall"}, ManaModeCmd, "magic", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"regen", "buffall"}, RegenModeCmd, "regen", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"obsidian", "buffall"}, ObsidianModeCmd, "obsidian", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"swiftness", "buffall"}, SwiftModeCmd, "swiftness", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"featherfall", "buffall"}, FeatherModeCmd, "feather", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"invisibility", "buffall"}, InvisModeCmd, "invis", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"nightowl", "buffall"}, NightModeCmd, "nightowl", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"waterwalk", "buffall"}, WaterWalkModeCmd, "waterwalk", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"orb", "buffall"}, OrbModeCmd, "orb", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"fairy", "buffall"}, FairyModeCmd, "fairy", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"soup", "buffall"}, SoupModeCmd, "wellfed", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"gills", "buffall"}, GillsModeCmd, "gills", "ultrabuff"));
+            Commands.ChatCommands.Add(new Command(new List<string>() {"battle", "buffall"}, BattleModeCmd, "battle", "ultrabuff"));
             GameHooks.Update += OnUpdate;
             ServerHooks.Leave += OnLeave;
         }
